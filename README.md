@@ -2,6 +2,8 @@
 
 E-commerce Web App is an application where users can register products, add them to theirs carts as well as remove them.
 
+HOST URL: https://e-commerce-codifin.web.app/
+
 ## Key Features
 
 These are the most important features this web application covers:
