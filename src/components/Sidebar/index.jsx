@@ -6,7 +6,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   return(
-    <aside className="flex flex-col w-80 gap-10 py-5 border-r shadow">
+    <aside className="flex-col w-80 gap-10 py-5 border-r shadow hidden md:flex">
       <div className="flex flex-col w-full p-5">
         <h4 className="text-cyan-700 font-semibold text-xl">E-commerce</h4>
         <p className="text-cyan-700 text-sm">Codifin Web Application</p>
