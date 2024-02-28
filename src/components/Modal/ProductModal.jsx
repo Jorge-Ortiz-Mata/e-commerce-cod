@@ -61,7 +61,7 @@ const ProductModal = ({ product, showModal, onCloseModal }) => {
             </div>
             <div className="flex items-center text-cyan-700 text-xs sm:text-sm gap-1">
               Price: 
-              <span className="font-semibold">{product.price}</span>
+              <span className="font-semibold">$ {product.price} USD</span>
             </div>
             <div className="flex flex-col text-cyan-700 text-xs sm:text-sm gap-1">
               Description: 
