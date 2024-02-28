@@ -19,12 +19,6 @@ const ProductList = () => {
 
   }, [inputValue]);
 
-  const sortByPrice = () => {
-    // products.sort((a, b) => {
-    //   return parseInt(a.price) - parseInt(b.price);
-    // });
-  }
-
   const handleOnChange = (e) => {
     const { value } = e.target;
     setInputValue(value);
@@ -47,16 +41,6 @@ const ProductList = () => {
           />
         </form>
       </div>
-
-      <div className="flex items-center justify-end">
-        <button 
-          onClick={sortByPrice}
-          className="text-sm text-white bg-orange-500 rounded px-3 py-1"
-        >
-          Sort by price
-        </button>
-      </div>
-
       <div className="flex flex-col gap-3">
         {
           productsFiltered.map(product => {
