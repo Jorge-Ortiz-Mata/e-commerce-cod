@@ -17,6 +17,12 @@ const ProductModal = ({ product, showModal, onCloseModal }) => {
           </div>
           <div className="flex flex-col w-full gap-3">
             <div className="flex items-center text-cyan-700 text-sm gap-1">
+              <div className="flex items-center justify-center w-full">
+                <img src={product.image} alt="product-image" className="w-40 h-40 rounded-full" />
+              </div>
+            </div>
+
+            <div className="flex items-center text-cyan-700 text-sm gap-1">
               Name: 
               <span className="font-semibold">{product.name}</span>
             </div>

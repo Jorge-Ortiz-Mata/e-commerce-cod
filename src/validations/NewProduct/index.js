@@ -11,5 +11,9 @@ export const productsFormSchema = (params) => {
     Object.assign(errors, { price: "must be greater than 0" });
   }
 
+  if(params?.image.length <= 0) {
+    Object.assign(errors, { image: "can't be blank" });
+  }
+
   return errors;
 }

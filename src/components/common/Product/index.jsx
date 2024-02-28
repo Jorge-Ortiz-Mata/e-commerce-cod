@@ -38,8 +38,19 @@ const Product = ({ product }) => {
     <>
       <div className="flex flex-col w-full rounded p-5 border border-cyan-600">
         <div className="flex items-center justify-between">
-          <div className="text-sm text-cyan-700">
-            Name: <span className="font-semibold">{product?.name}</span>
+          <div className="text-sm text-cyan-700 flex items-center gap-2">
+            {
+              product?.image.length > 0
+              ? <div className="flex items-center justify-center w-full">
+                  <img src={product.image} alt="product-image" className="w-7 h-7 rounded-full" />
+                </div>
+              : <div className="flex items-center justify-center w-full">
+                  <div className="bg-gray-500 w-7 h-7 rounded-full"></div>
+              </div> 
+            }
+            <div className="flex items-center gap-1">
+              <span className="font-semibold">{product?.name}</span>
+            </div>
           </div>
 
           <button onClick={addToCart} className="text-blue-500 font-semibold text-sm">

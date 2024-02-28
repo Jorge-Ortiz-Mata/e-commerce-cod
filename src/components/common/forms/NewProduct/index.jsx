@@ -6,6 +6,7 @@ import CustomTextField from "../../CustomTextField";
 import CustomButton from "../../CustomButton";
 import { productsFormSchema } from "../../../../validations/NewProduct";
 import CustomErrorInput from "../../CustomErrorInput";
+import CustomFileField from "../../CustomFileField";
 
 const NewProductForm = () => {
   const [isFinished, setIsFinished] = useState(false); 
@@ -89,6 +90,20 @@ const NewProductForm = () => {
           hasError={"price" in errors}
         />
         { errors?.price && <CustomErrorInput name="The price" message={errors?.price} /> }
+      </div>
+
+      <div className="flex flex-col items-start w-full gap-1">
+        <CustomLabel 
+          title="Image:"
+          htmlFor="image"
+        />
+        <CustomFileField 
+          id="image"
+          name="image"
+          onChange={handleOnChange}
+          hasError={"image" in errors}
+        />
+        { errors?.image && <CustomErrorInput name="The image" message={errors?.image} /> }
       </div>
 
       <div className="flex flex-col items-start w-full gap-1">
