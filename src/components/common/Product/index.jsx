@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAtom } from "jotai";
+import { FaCartPlus, FaClipboardList } from "react-icons/fa";
 import { productsCartAtom } from "../../../store";
 import ProductModal from "../../Modal/ProductModal"
 
@@ -51,20 +52,28 @@ const Product = ({ product }) => {
             </div>
           </div>
 
-          <button onClick={addToCart} className="text-blue-500 font-semibold text-sm">
-            Add to the cart
-          </button>
+          <div className="flex flex-col gap-2 items-end">
+            <button onClick={addToCart} className="bg-blue-500 text-white flex items-center px-2 py-1 rounded font-semibold text-xs gap-2">
+              <FaCartPlus />
+              Add
+            </button>
+
+            <div 
+              onClick={ () => setShowModal(true) }
+              className="bg-orange-500 text-white flex items-center px-2 py-1 rounded font-semibold text-xs gap-2 cursor-pointer"
+              >
+              <FaClipboardList />
+              See more
+            </div>
+          </div>
         </div>
 
         <div className="text-sm text-cyan-700">
-          Price: <span className="font-semibold">{product?.price}</span>
+          Price: <span className="font-semibold">$ {product?.price} USD</span>
         </div>
 
-        <div 
-          onClick={ () => setShowModal(true) }
-          className="text-sm text-cyan-700 underline cursor-pointer italic"
-          >
-          See product details
+        <div className="text-sm text-cyan-700 gap-1 flex items-center">
+          Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed illo voluptatem quasi cumque saepe soluta
         </div>
       </div>
 

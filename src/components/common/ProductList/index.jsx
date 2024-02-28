@@ -1,3 +1,4 @@
+import { FaSortAmountUp, FaSortAmountDown } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { productsAtom } from "../../../store";
@@ -56,7 +57,8 @@ const ProductList = () => {
         </form>
       </div>
       <div className="flex">
-        <button className="text-sm text-gray-500 font-semibold" onClick={sortProducts}>
+        <button className="text-xs text-white font-semibold flex items-center py-1 rounded px-2 bg-gray-400 gap-1" onClick={sortProducts}>
+          { sortConfig ? <FaSortAmountDown /> : <FaSortAmountUp /> }
           Sort by price
         </button>
       </div>

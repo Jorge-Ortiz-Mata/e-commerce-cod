@@ -1,3 +1,4 @@
+import { FaCartPlus, FaClipboardList } from "react-icons/fa";
 import { useAtom } from "jotai";
 import { productsCartAtom } from "../../store";
 
@@ -70,7 +71,10 @@ const ProductModal = ({ product, showModal, onCloseModal }) => {
             </div>
             <div className="flex w-full items-center justify-end">
               <button onClick={addToCart} className="text-blue-500 font-semibold text-sm">
-                Add to the cart
+                <button onClick={addToCart} className="bg-blue-500 text-white flex items-center px-2 py-1 rounded font-semibold text-xs gap-2">
+                  <FaCartPlus />
+                  Add
+                </button>
               </button>
             </div>
           </div>
