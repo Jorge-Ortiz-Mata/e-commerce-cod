@@ -14,7 +14,7 @@ const Product = ({ product }) => {
   const addToCart = () => {
     const productFound = productsCart.find(item => {
       return item.name === product.name
-    })
+    });
 
     if(productFound) {
       setProductsCart(
@@ -32,11 +32,9 @@ const Product = ({ product }) => {
     }
   }
 
-  console.log(productsCart)
-
   return(
     <>
-      <div className="flex flex-col w-full rounded p-5 border border-cyan-600">
+      <div className="flex flex-col w-full rounded p-5 border border-cyan-600 gap-3">
         <div className="flex items-center justify-between">
           <div className="text-sm text-cyan-700 flex items-center gap-2">
             {
@@ -64,7 +62,7 @@ const Product = ({ product }) => {
 
         <div 
           onClick={ () => setShowModal(true) }
-          className="text-sm text-cyan-700 underline cursor-pointer italic mt-2"
+          className="text-sm text-cyan-700 underline cursor-pointer italic"
           >
           See product details
         </div>

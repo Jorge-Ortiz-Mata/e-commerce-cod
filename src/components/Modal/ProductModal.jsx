@@ -1,4 +1,30 @@
+import { useAtom } from "jotai";
+import { productsCartAtom } from "../../store";
+
 const ProductModal = ({ product, showModal, onCloseModal }) => {
+  const [productsCart, setProductsCart] = useAtom(productsCartAtom);
+
+  const addToCart = () => {
+    const productFound = productsCart.find(item => {
+      return item.name === product.name
+    });
+
+    if(productFound) {
+      setProductsCart(
+        productsCart.map(item => {
+          if (item.name === product.name)
+            return { ...item, quantity: item.quantity + 1, 
+          };
+          return item;
+        })
+      );
+    } else {
+      setProductsCart(prevState => {
+        return [...prevState, { name: product.name, price: product.price, quantity: 1 }]
+      });
+    }
+  }
+
   if(showModal) {
     return(
       <div className="top-0 left-0 fixed flex w-full h-screen items-center justify-center bg-gray-700/50 z-10">
@@ -16,10 +42,16 @@ const ProductModal = ({ product, showModal, onCloseModal }) => {
             <hr />
           </div>
           <div className="flex flex-col w-full gap-3">
-            <div className="flex items-center text-cyan-700 text-sm gap-1">
-              <div className="flex items-center justify-center w-full">
-                <img src={product.image} alt="product-image" className="w-40 h-40 rounded-full" />
-              </div>
+            <div className="text-sm text-cyan-700 flex items-center gap-2">
+              {
+                product?.image.length > 0
+                ? <div className="flex items-center justify-center w-full">
+                    <img src={product.image} alt="product-image" className="w-40 h-40 rounded-full" />
+                  </div>
+                : <div className="flex items-center justify-center w-full">
+                    <div className="bg-gray-500 w-40 h-40 rounded-full"></div>
+                </div> 
+              }
             </div>
 
             <div className="flex items-center text-cyan-700 text-sm gap-1">
@@ -35,6 +67,11 @@ const ProductModal = ({ product, showModal, onCloseModal }) => {
               <span className="font-semibold">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias repellendus magnam, atque vero illo nam vitae officia nostrum, optio iure, repellat beatae blanditiis quisquam eaque inventore debitis magni excepturi necessitatibus!
               </span>
+            </div>
+            <div className="flex w-full items-center justify-end">
+              <button onClick={addToCart} className="text-blue-500 font-semibold text-sm">
+                Add to the cart
+              </button>
             </div>
           </div>
         </section>
