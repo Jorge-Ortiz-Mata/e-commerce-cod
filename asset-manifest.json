@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Jorge-Ortiz-Mata/e-commerce-cod/static/css/main.0f19d568.css",
+    "main.js": "/Jorge-Ortiz-Mata/e-commerce-cod/static/js/main.b661cca4.js",
+    "static/js/453.7ebef726.chunk.js": "/Jorge-Ortiz-Mata/e-commerce-cod/static/js/453.7ebef726.chunk.js",
+    "index.html": "/Jorge-Ortiz-Mata/e-commerce-cod/index.html",
+    "main.0f19d568.css.map": "/Jorge-Ortiz-Mata/e-commerce-cod/static/css/main.0f19d568.css.map",
+    "main.b661cca4.js.map": "/Jorge-Ortiz-Mata/e-commerce-cod/static/js/main.b661cca4.js.map",
+    "453.7ebef726.chunk.js.map": "/Jorge-Ortiz-Mata/e-commerce-cod/static/js/453.7ebef726.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f19d568.css",
+    "static/js/main.b661cca4.js"
+  ]
+}
