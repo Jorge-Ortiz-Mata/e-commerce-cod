@@ -19,6 +19,9 @@ const Sidebar = () => {
         <li className="text-cyan-700 font-semibold w-full bg-gradient-to-r from-cyan-100 p-2 to-white duration-300 hover:text-cyan-400">  
           <Link to="/products/new">New product</Link>
         </li>
+        <li className="text-cyan-700 font-semibold w-full bg-gradient-to-r from-cyan-100 p-2 to-white duration-300 hover:text-cyan-400">  
+          <Link to="/cart">My Cart</Link>
+        </li>
       </ul>
     </aside>
   );

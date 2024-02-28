@@ -27,7 +27,7 @@ const ProductList = () => {
   return(
     <div className="flex flex-col w-full h-full gap-5">
       <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-lg text-cyan-700">Your Products</h3>
+        <h3 className="font-semibold text-lg text-cyan-700">Current Products</h3>
         
         <form>
           <input 
