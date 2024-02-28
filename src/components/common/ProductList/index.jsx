@@ -17,7 +17,7 @@ const ProductList = () => {
       setProductsFiltered(productsFiltered);
     } 
 
-  }, [inputValue]);
+  }, [inputValue, products]);
 
   const handleOnChange = (e) => {
     const { value } = e.target;
