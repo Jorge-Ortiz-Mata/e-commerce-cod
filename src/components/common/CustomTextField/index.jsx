@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const CustomTextField = ({ id, name, value = "", onChange }) => {
+const CustomTextField = ({ type, id, name, value = "", onChange, hasError }) => {
   const [inputValue, setInputValue] = useState(value);
 
   const handleOnChange = (e) => {
@@ -11,10 +11,10 @@ const CustomTextField = ({ id, name, value = "", onChange }) => {
 
   return(
     <input 
-      type="text"
+      type={type}
       id={id}
       name={name}
-      className="border rounded text-sm py-0.5 px-2 w-full"
+      className={`border border-gray-200 font-semibold text-gray-500 px-2 py-1 rounded text-xs w-full ${ hasError ? "border-red-500" : "" }`}
       value={inputValue}
       onChange={handleOnChange}
     />

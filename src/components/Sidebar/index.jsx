@@ -10,11 +10,14 @@ const Sidebar = () => {
       </div>
 
       <ul className="flex flex-col w-full">
-        <li>
+        <li className="text-cyan-700 font-semibold w-full bg-gradient-to-r from-cyan-100 p-2 to-white duration-300 hover:text-cyan-400">
           <Link to="/">Home</Link>
         </li>
-        <li>  
+        <li className="text-cyan-700 font-semibold w-full bg-gradient-to-r from-cyan-100 p-2 to-white duration-300 hover:text-cyan-400">
           <Link to="/products">Products</Link>
+        </li>
+        <li className="text-cyan-700 font-semibold w-full bg-gradient-to-r from-cyan-100 p-2 to-white duration-300 hover:text-cyan-400">  
+          <Link to="/products/new">New product</Link>
         </li>
       </ul>
     </aside>
